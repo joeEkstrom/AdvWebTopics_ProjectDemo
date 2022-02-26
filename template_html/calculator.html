@@ -35,24 +35,41 @@
     </nav>
     <div class="container">
         <div class="bg-light p-5 rounded-lg m-3">
-            <h1 class="display-4 text-center">Home</h1>
-        </div>
-        <div class="card p-2">
-            <img src="https://automationpanda.files.wordpress.com/2017/09/django-logo-negative.png"
-                class="card-img-top">
-            <div class="card-body">
-                <h3 class="card-title">What is Django?</h3>
+            <h1 class="display-4">Welcome to DJango MPG!</h1>
+            <p class="lead">In this demo we will be using Django to create a custom miles per gallon calculator.</p>
+          </div>
+          <div class="card p-2">
+              <div class="card-body">
+                <h3 class="card-title">MPG Calculator</h3>
+
                 <!-- Show if there are errors -->
-                <p class="lead">
-                    Django is a high-level Python web framework that enables rapid development of secure and
-                    maintainable
-                    websites. ... Django can be (and has been) used to build almost any type of website — from content
-                    management systems and wikis, through to social networks and news sites.
-                </p>
-                <a href="https://www.djangoproject.com/" class="btn btn-secondary">Learn more</a>
+                <ul class="text-danger">
+                    <li>[error]</li>
+                    <li>[error]</li>
+                </ul>
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for="distance" class="form-label">Miles Driven</label>
+                        <input type="text" class="form-control" id="distance">
+                    </div>
+                    <div class="mb-3">
+                        <label for="gallons" class="form-label">Gallons Consumed</label>
+                        <input type="text" class="form-control" id="gallons">
+                    </div>
+                    <div class="mb-3">
+                        <button type="submit" class="btn btn-secondary">Calculate MPG</button>
+                    </div>
+                </form>
+              </div>
+          </div>
+
+          <!-- Show calculated results if all is valid -->
+          <div class="card p-5 mt-2">
+            <div class="card-body">
+              <h3 class="card-title text-center">Calculated Miles Per Gallon</h3>
+              <p class="card-text text-center">[The Results]</p>
             </div>
         </div>
     </div>
 </body>
-
 </html>
