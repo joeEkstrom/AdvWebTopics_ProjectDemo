@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Students</title>
+</head>
+<body>
+	<h2>Students</h2>
+	<ul>
+		<!-- resolves to false if there are no objects -->
+		{% if object_list %}
+			{% for student in object_list %}
+				<li>{{ student }}</li>
+			{% endfor %}
+		{% else %}
+			<h5>No results to display</h5>
+		{% endif %}
+	</ul>
+
+	<a href="addStudent">Add new Student</a>
+	
+</body>
+</html>
