@@ -1,7 +1,9 @@
+from django.views.generic import ListView
 from django.contrib import messages
 from django.shortcuts import render
-from django.views.generic import ListView
+ 
 from Students.models import Student
+from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 class StudentListView(ListView):
@@ -23,9 +25,12 @@ def add(request):
 			graduated = graduated,
 			amount_owed = 1600,
 		)
+
+		# fss = FileSystemStorage()
+		# file = fss.save(profile_pic.name, profile_pic)
+		# file_url = fss.url(file)
+
 		messages.info(request, 'Student Created')
 
-		return render(request, 'students/add.html', {'file':profile_pic})
-
-	else:
-		return render(request, 'students/add.html')
+		return render(request, 'students/add.html', {'file':student.profile_pic})
+	return render(request, 'students/add.html')

@@ -1,0 +1,179 @@
+* {
+	font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif, 'Arial Narrow', Arial, sans-serif;
+	box-sizing: border-box;
+}
+
+body {
+	width: 80%;
+	margin: 5em auto;
+	background-color: lightslategray
+}
+
+h2 {
+	text-align: center;
+}
+
+table {
+	width: 100%;
+	margin: 5em auto;
+	background-color: lightcyan;
+	padding: 1em;
+}
+
+table th, td {
+	width: 20%;
+	padding: 0.25em 1em;
+}
+
+td {
+	text-align: center;
+}
+
+.custom-button {
+	padding: 1em;
+	border: 1px solid lightcoral;
+	background-color: lightcoral;
+	text-decoration: none;
+	color: darkslateblue;
+	font-weight: bold;
+	border-radius: 5%;
+}
+
+.custom-button:hover {
+	background-color: aliceblue;
+	border-color: aliceblue;
+	color: royalblue;
+}
+
+form {
+	width: 70%;
+	margin: 0 auto;
+}
+
+form td {
+	text-align: left
+}
+
+.custom-textfield {
+	padding: 0.5em 1em;
+	min-width: 25em;
+	border-radius: 5px;
+}
+
+.container {
+	display: block;
+	position: relative;
+	padding-left: 35px;
+	margin-bottom: 12px;
+	cursor: pointer;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 25px;
+	width: 25px;
+	background-color: darkgray;
+}
+
+.container:hover input ~ .checkmark {
+	background-color: darkslategray;
+}
+
+.container input:checked ~ .checkmark {
+	background-color: deeppink;
+}
+
+.checkmark:after {
+	content: "";
+	position: absolute;
+	display: none;
+}
+
+.container input:checked ~ .checkmark:after {
+	display: block;
+}
+
+.container .checkmark:after {
+	left: 9px;
+	top: 5px;
+	width: 5px;
+	height: 10px;
+	border: solid white;
+	border-width: 0 3px 3px 0;
+	-webkit-transform: rotate(45deg);
+	-ms-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+
+.file {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	height: 2.5rem;
+}
+
+.file input {
+	min-width: 14rem;
+	margin: 0;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+
+.file-custom {
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	z-index: 5;
+	height: 2.5rem;
+	padding: .5rem 1rem;
+	line-height: 1.5;
+	color: #555;
+	background-color: #fff;
+	border: 0.075rem solid #ddd;
+	border-radius: .25rem;
+	box-shadow: inset 0 .2rem .4rem rgba(0,0,0,.05);
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select:none;
+}
+
+.file-custom:after {
+	content: "Choose file...";
+}
+
+.file-custom:before {
+	position: absolute;
+	top: -.075rem;
+	right: -0.075rem;
+	bottom: -0.075rem;
+	z-index: 6;
+	display: block;
+	content: "Browse";
+	height: 1.3rem;
+	padding: 0.5rem 1rem;
+	line-height: 1.5;
+	color: #555;
+	background-color: #eee;
+	border: 0.075rem solid #ddd;
+	border-radius: 0 0.25rem 0.25rem 0;
+}
+
+.file input:focus ~ .file-custom {
+	box-shadow: 0 0 0 0.075rem #fff, 0 0 0 0.2rem #0074d9;
+}

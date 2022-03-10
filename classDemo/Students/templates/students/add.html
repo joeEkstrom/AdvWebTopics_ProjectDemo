@@ -1,37 +1,42 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Add Student</title>
-</head>
-<body>
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>Add Students</h2>
 	<form action='' method='post' enctype='multipart/form-data'>
 		{% csrf_token %}
 		<table>
 			<tr>
 				<td>First Name:</td>
-				<td><input type="text" name="first_name"></td>
+				<td><input type="text" name="first_name" class="custom-textfield"></td>
 			</tr>
 			<tr>
 				<td>Last Name:</td>
-				<td><input type="text" name="last_name"></td>
+				<td><input type="text" name="last_name" class="custom-textfield"></td>
 			</tr>
 			<tr>
 				<td>Profile Picture:</td>
-				<td><input type="file" name="profile_pic"></td>
+				<td>
+					<label for="" class="file">
+						<input type="file" name="profile_pic" class="custom-textfield">
+						<span class="file-custom"></span>
+					</label>
+				</td>
 			</tr>
 			<tr>
 				<td>Date of Birth:</td>
-				<td><input type="date" name="date_of_birth"></td>
+				<td><input type="date" name="date_of_birth" class="custom-textfield"></td>
 			</tr>
 			<tr>
-				<td>Graduated:</td>
-				<td><input type="checkbox" name="graduated"></td>
+				<td></td>
+				<td>
+					<label class="container">Graduated
+						<input type="checkbox" name="graduated">
+						<span class="checkmark"></span>
+					</label>
+				</td>
 			</tr>
 		</table>
-		<input type="submit">
+		<input type="submit" class="custom-button">
 	</form>	
 
 	<div>
@@ -40,5 +45,5 @@
 		{% endfor %}
 		<p>{{file}}</p>
 	</div>
-</body>
-</html>
+
+{% endblock%}

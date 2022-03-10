@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Students</title>
-</head>
-<body>
-	<h2>Students</h2>
-	<ul>
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>Student List</h2>
 		<!-- resolves to false if there are no objects -->
 		{% if object_list %}
-			{% for student in object_list %}
-				<li>{{ student }}</li>
-			{% endfor %}
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Amount Owed</th>
+					<th>Graduated</th>
+					<th>Profile Picture</th>
+				</tr>
+				{% for student in object_list %}
+					<tr>
+						<td>{{student}}</td>
+						<td>{{student.age}} </td>
+						<td>{{student.amount_owed}}</td>
+						<td>{{student.is_graduated}}</td>
+						<td><img src="{{student.profile_pic.url}}" alt="" width="100"></td>
+					</tr>
+				{% endfor %}
+			</table>
 		{% else %}
 			<h5>No results to display</h5>
 		{% endif %}
 	</ul>
 
-	<a href="addStudent">Add new Student</a>
+	<a href="addStudent" class="custom-button">Add new Student</a>
 	
-</body>
-</html>
+{% endblock %}
