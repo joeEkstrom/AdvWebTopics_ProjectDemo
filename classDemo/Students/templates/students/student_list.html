@@ -3,7 +3,7 @@
 {% block content %}
 	<h2>Student List</h2>
 		<!-- resolves to false if there are no objects -->
-		{% if object_list %}
+
 			<table>
 				<tr>
 					<th>Name</th>
@@ -20,11 +20,10 @@
 						<td>{{student.is_graduated}}</td>
 						<td><img src="{{student.profile_pic.url}}" alt="" width="100"></td>
 					</tr>
+				{% empty %}
+					<h5>No results to display</h5>
 				{% endfor %}
 			</table>
-		{% else %}
-			<h5>No results to display</h5>
-		{% endif %}
 	</ul>
 
 	<a href="addStudent" class="custom-button">Add new Student</a>

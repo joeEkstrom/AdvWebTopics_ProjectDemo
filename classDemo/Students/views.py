@@ -1,4 +1,4 @@
-from django.views.generic import ListView
+from django.views.generic import ListView, DetailView
 from django.contrib import messages
 from django.shortcuts import render
  
@@ -7,6 +7,9 @@ from django.core.files.storage import FileSystemStorage
 
 # Create your views here.
 class StudentListView(ListView):
+	model = Student
+
+class StudentDetailView(DetailView):
 	model = Student
 
 def add(request):

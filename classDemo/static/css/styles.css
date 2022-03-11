@@ -29,6 +29,10 @@ td {
 	text-align: center;
 }
 
+.detail-image {
+	max-width: 70%;
+}
+
 .custom-button {
 	padding: 1em;
 	border: 1px solid lightcoral;
