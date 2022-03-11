@@ -1,0 +1,50 @@
+<!-- Add base html extension to top of file -->
+
+<!-- add block content to show this is the body of the html -->
+
+    <h2>Add Students</h2>
+	<form action='' method='post' enctype='multipart/form-data'>
+		<!-- add csrf token to prevent CSRF attacks-->
+		
+        <table>
+			<tr>
+				<td>First Name:</td>
+				<td><input type="text" name="first_name" class="custom-textfield"></td>
+			</tr>
+			<tr>
+				<td>Last Name:</td>
+				<td><input type="text" name="last_name" class="custom-textfield"></td>
+			</tr>
+			<tr>
+				<td>Profile Picture:</td>
+				<td>
+					<label class="file">
+						<input type="file" name="profile_pic">
+						<span class="file-custom"></span>
+					</label>
+				</td>
+			</tr>
+			<tr>
+				<td>Date of Birth:</td>
+				<td><input type="date" name="date_of_birth" class="custom-textfield"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td>
+					<label class="container">Graduated
+						<input type="checkbox" name="graduated">
+						<span class="checkmark"></span>
+					</label>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" class="custom-button">
+	</form>	
+
+	<div>
+        <!-- loop through the message array -->
+			<h3><!-- message --></h3>
+        <!-- end loop -->
+	</div>
+
+<!-- end block for body -->
