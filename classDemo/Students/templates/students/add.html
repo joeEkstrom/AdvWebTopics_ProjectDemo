@@ -16,8 +16,8 @@
 			<tr>
 				<td>Profile Picture:</td>
 				<td>
-					<label for="" class="file">
-						<input type="file" name="profile_pic" class="custom-textfield">
+					<label class="file">
+						<input type="file" name="profile_pic">
 						<span class="file-custom"></span>
 					</label>
 				</td>
@@ -43,7 +43,6 @@
 		{% for message in messages %}
 			<h3>{{message}}</h3>
 		{% endfor %}
-		<p>{{file}}</p>
 	</div>
 
 {% endblock%}

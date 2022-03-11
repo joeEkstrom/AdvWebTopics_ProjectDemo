@@ -11,14 +11,16 @@
 					<th>Amount Owed</th>
 					<th>Graduated</th>
 					<th>Profile Picture</th>
+					<th></th>
 				</tr>
 				{% for student in object_list %}
 					<tr>
 						<td>{{student}}</td>
 						<td>{{student.age}} </td>
-						<td>{{student.amount_owed}}</td>
+						<td>${{student.amount_owed|floatformat:2}}</td>
 						<td>{{student.is_graduated}}</td>
 						<td><img src="{{student.profile_pic.url}}" alt="" width="100"></td>
+						<th><a href="/students/{{student.id}}">Details</a></th>
 					</tr>
 				{% empty %}
 					<h5>No results to display</h5>
