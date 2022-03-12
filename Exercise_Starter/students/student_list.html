@@ -1,0 +1,37 @@
+<!-- Add base html extension -->
+
+<!-- add block content to show this is the body of the html -->
+
+	<h2>Student List</h2>
+		<!-- resolves to false if there are no objects -->
+
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Amount Owed</th>
+					<th>Graduated</th>
+					<th>Profile Picture</th>
+					<th></th>
+				</tr>
+                <!-- Loop through the students in the object list -->
+					<tr>
+						<td><!-- student name --></td>
+						<td><!-- student age --></td>
+						<td>$<!-- formatted amount owed --></td>
+						<td><!-- is graduated --></td>
+                        <!-- show profike image below -->
+						<td><img src="" alt="" width="100"></td>
+                        <!-- link to student details -->
+						<th><a href="">Details</a></th>
+					</tr>
+                <!-- show if the list is empty -->
+					<h5>No results to display</h5>
+                <!-- end loop -->
+			</table>
+	</ul>
+
+    <!-- link to add a new student -->
+	<a href="addStudent" class="custom-button">Add new Student</a>
+	
+<!-- end block for body -->

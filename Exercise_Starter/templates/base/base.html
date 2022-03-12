@@ -1,4 +1,4 @@
-{% load static %}
+<!-- add link to stylesheet using static -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -10,12 +10,15 @@
 	<link rel="stylesheet" href="{% static 'css/styles.css' %}">
 </head>
 <body>
+    <!-- navigation for students -->
 	<header>
-		<a href="/">Students</a>
-		<a href="/courses">Courses</a>
+		<a href="">Students</a> | 
+		<a href="">Add Students</a> |
+		<a href="">Courses</a> | 
+		<a href="">Add Courses</a>
 	</header>
-	{% block content%}
+
+    <!-- add body content tags -->
 	
-	{% endblock %}
 </body>
 </html>
