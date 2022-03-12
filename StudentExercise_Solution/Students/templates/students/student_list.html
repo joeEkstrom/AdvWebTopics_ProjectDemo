@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<h2>Student List</h2>
+		<!-- resolves to false if there are no objects -->
+
+			<table>
+				<tr>
+					<th>Name</th>
+					<th>Age</th>
+					<th>Amount Owed</th>
+					<th>Graduated</th>
+					<th>Profile Picture</th>
+					<th></th>
+				</tr>
+				{% for student in object_list %}
+					<tr>
+						<td>{{student}}</td>
+						<td>{{student.age}}</td>
+						<td>${{student.amount_owed|floatformat:2}}</td>
+						<td>{{student.is_graduated}}</td>
+						<td><img src="{{student.profile_pic.url}}" alt="" width="100"></td>
+						<th><a href="/students/{{student.id}}">Details</a></th>
+					</tr>
+				{% empty %}
+					<h5>No results to display</h5>
+					
+				{% endfor %}
+			</table>
+
+	<a href="addStudent" class="custom-button">Add new Student</a>
+	
+{% endblock %}
