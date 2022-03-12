@@ -1,9 +1,11 @@
-{% extends 'base.html' %}
+<!-- Add base html extension to top of file -->
 
-{% block content %}
+<!-- add block content to show this is the body of the html -->
+
 	<h2>Add Courses</h2>
 	<form action='' method='post'>
-		{% csrf_token %}
+		<!-- add csrf token to prevent CSRF attacks-->
+
 		<table>
 			<tr>
 				<td>Course Name:</td>
@@ -18,9 +20,9 @@
 	</form>	
 
 	<div>
-		{% for message in messages %}
-			<h3>{{message}}</h3>
-		{% endfor %}
+        <!-- loop through the message array -->
+			<h3><!-- message --></h3>
+        <!-- end loop -->
 	</div>
 
-{% endblock%}
+<!-- end block for body -->
