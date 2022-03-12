@@ -169,7 +169,6 @@ form td {
 	z-index: 6;
 	display: block;
 	content: "Browse";
-	height: 2.5rem;
 	padding: .5rem 1rem;
 	line-height: 1.5;
 	color: #555;
@@ -180,4 +179,31 @@ form td {
 
 .file input:focus ~ .file-custom {
 	box-shadow: 0 0 0 .075rem #fff, 0 0 0 .2rem #0074d9;
+}
+
+header a {
+	text-align: center;
+	padding: 1em;
+	background-color: coral;
+	text-decoration: none;
+	display: inline-block;
+	font-weight: bold;
+	width: 15%;
+	margin: 0 0.5em;
+}
+
+header a:hover {
+	color: white;
+	background-color: brown;
+}
+
+th a {
+	font-weight: bold;
+	text-decoration: none;
+	color: chocolate;
+	padding: 0.5em;
+}
+
+th a:hover {
+	color: cornflowerblue;
 }

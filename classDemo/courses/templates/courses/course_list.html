@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2>Course List</h2>
+
+<table>
+	<tr>
+		<th>Course Name</th>
+		<th>Start Date</th>
+	</tr>
+	{% for course in object_list %}
+		<tr>
+			<td>{{course}}</td>
+			<td>{{course.start_date|date:"M d, Y"}}</td>
+		</tr>
+	{% empty %}
+		<h5>No results to display</h5>
+	{% endfor %}
+</table>
+
+<a href="addCourse" class='custom-button'>Add new Course</a>
+
+{% endblock %}
