@@ -79,7 +79,7 @@ DATABASES = {
     'default': {
         'NAME': 'classdemo',
         'ENGINE': 'django.db.backends.mysql',        
-        'USER': 'dev',
+        'USER': 'Dev',
         'PASSWORD': 'dev1234',
         'HOST': 'localhost'
     }
